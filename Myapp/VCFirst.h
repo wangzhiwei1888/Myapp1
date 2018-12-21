@@ -14,6 +14,7 @@
 
     
     UIButton *_mybutton;
+    UIButton *_mybutton1;
     
 }
 @end

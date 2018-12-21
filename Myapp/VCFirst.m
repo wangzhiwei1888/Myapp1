@@ -8,6 +8,7 @@
 
 #import "VCFirst.h"
 #import "VCSecond.h"
+#import "RNMainViewController.h"
 
 @interface VCFirst ()
 
@@ -22,17 +23,19 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     _mybutton = [[UIButton alloc] init];
-    
     [_mybutton setTitle:@"aaaa" forState:UIControlStateNormal];
     _mybutton.backgroundColor = [UIColor redColor];
     _mybutton.frame = CGRectMake(40, 40, 100, 100);
-    
     [_mybutton addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    
-//    [self.view addSubview:_imageView];
-    
-    
     [self.view addSubview:_mybutton];
+    
+    
+    _mybutton1 = [[UIButton alloc] init];
+    [_mybutton1 setTitle:@"onClickRN" forState:UIControlStateNormal];
+    _mybutton1.backgroundColor = [UIColor redColor];
+    _mybutton1.frame = CGRectMake(140, 140, 100, 100);
+    [_mybutton1 addTarget:self action:@selector(onClickRN) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_mybutton1];
     
     
     
@@ -46,6 +49,13 @@
     VCSecond *vcsecond = [[VCSecond alloc] init];
     NSLog(@"test");
      [self.navigationController pushViewController:vcsecond animated:true];
+}
+
+-(void)onClickRN{
+    
+    RNMainViewController *vc = [[RNMainViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
