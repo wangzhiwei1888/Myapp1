@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C471F85F6C68BFCDDF7668D /* libPods-Myapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E58E9CAAA29E42010DBFB7B5 /* libPods-Myapp.a */; };
+		7D04F51721D094D5008E24B1 /* OpenNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D04F51621D094D5008E24B1 /* OpenNativeModule.m */; };
 		7D731DEF21CCBD6100DB0640 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731DEE21CCBD6100DB0640 /* AppDelegate.m */; };
-		7D731DF521CCBD6200DB0640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D731DF321CCBD6200DB0640 /* Main.storyboard */; };
 		7D731DF721CCBD6200DB0640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D731DF621CCBD6200DB0640 /* Assets.xcassets */; };
 		7D731DFA21CCBD6200DB0640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D731DF821CCBD6200DB0640 /* LaunchScreen.storyboard */; };
 		7D731DFD21CCBD6200DB0640 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731DFC21CCBD6200DB0640 /* main.m */; };
@@ -40,10 +40,11 @@
 
 /* Begin PBXFileReference section */
 		0621D6CF2945F5E20489C2C5 /* Pods-Myapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.release.xcconfig"; sourceTree = "<group>"; };
+		7D04F51521D094D5008E24B1 /* OpenNativeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenNativeModule.h; sourceTree = "<group>"; };
+		7D04F51621D094D5008E24B1 /* OpenNativeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenNativeModule.m; sourceTree = "<group>"; };
 		7D731DEA21CCBD6100DB0640 /* Myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D731DED21CCBD6100DB0640 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D731DEE21CCBD6100DB0640 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7D731DF421CCBD6200DB0640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D731DF621CCBD6200DB0640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D731DF921CCBD6200DB0640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D731DFB21CCBD6200DB0640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 				7DD180E521CCCB44003B086E /* RNView.m */,
 				7D731DED21CCBD6100DB0640 /* AppDelegate.h */,
 				7D731DEE21CCBD6100DB0640 /* AppDelegate.m */,
-				7D731DF321CCBD6200DB0640 /* Main.storyboard */,
 				7D731DF621CCBD6200DB0640 /* Assets.xcassets */,
 				7D731DF821CCBD6200DB0640 /* LaunchScreen.storyboard */,
 				7D731DFB21CCBD6200DB0640 /* Info.plist */,
@@ -149,6 +149,8 @@
 				7D731E2021CCBE2800DB0640 /* VCFirst.m */,
 				7D731E2221CCC7A500DB0640 /* VCSecond.h */,
 				7D731E2321CCC7A500DB0640 /* VCSecond.m */,
+				7D04F51521D094D5008E24B1 /* OpenNativeModule.h */,
+				7D04F51621D094D5008E24B1 /* OpenNativeModule.m */,
 			);
 			path = Myapp;
 			sourceTree = "<group>";
@@ -281,7 +283,6 @@
 			files = (
 				7D731DFA21CCBD6200DB0640 /* LaunchScreen.storyboard in Resources */,
 				7D731DF721CCBD6200DB0640 /* Assets.xcassets in Resources */,
-				7D731DF521CCBD6200DB0640 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D04F51721D094D5008E24B1 /* OpenNativeModule.m in Sources */,
 				7D731E2421CCC7A500DB0640 /* VCSecond.m in Sources */,
 				7D731E2121CCBE2800DB0640 /* VCFirst.m in Sources */,
 				7DD180E721CCCB44003B086E /* RNMainViewController.m in Sources */,
@@ -381,14 +383,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7D731DF321CCBD6200DB0640 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7D731DF421CCBD6200DB0640 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7D731DF821CCBD6200DB0640 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

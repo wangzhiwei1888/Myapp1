@@ -21,15 +21,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    VCFirst *vcFirst = [[VCFirst alloc] init];
+    _navController = [[UINavigationController alloc] initWithRootViewController:[[VCFirst alloc] init]];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcFirst];
-    
-    vcFirst.title = @"first";
-    
-    self.window.rootViewController = nav;
-    
-    //    nav.navigationBar.translucent = NO;
+    self.window.rootViewController = _navController;
     
     [self.window makeKeyAndVisible];
     
