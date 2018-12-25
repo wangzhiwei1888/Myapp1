@@ -17,6 +17,7 @@
 		7D731E1221CCBD6200DB0640 /* MyappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731E1121CCBD6200DB0640 /* MyappUITests.m */; };
 		7D731E2121CCBE2800DB0640 /* VCFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731E2021CCBE2800DB0640 /* VCFirst.m */; };
 		7D731E2421CCC7A500DB0640 /* VCSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731E2321CCC7A500DB0640 /* VCSecond.m */; };
+		7D78D22521D211EB00E7F4BF /* DataTransferModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D78D22421D211EB00E7F4BF /* DataTransferModule.m */; };
 		7DD180E721CCCB44003B086E /* RNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD180E421CCCB44003B086E /* RNMainViewController.m */; };
 		7DD180E821CCCB44003B086E /* RNView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD180E521CCCB44003B086E /* RNView.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		7D731E2021CCBE2800DB0640 /* VCFirst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCFirst.m; sourceTree = "<group>"; };
 		7D731E2221CCC7A500DB0640 /* VCSecond.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCSecond.h; sourceTree = "<group>"; };
 		7D731E2321CCC7A500DB0640 /* VCSecond.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCSecond.m; sourceTree = "<group>"; };
+		7D78D22321D211EB00E7F4BF /* DataTransferModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTransferModule.h; sourceTree = "<group>"; };
+		7D78D22421D211EB00E7F4BF /* DataTransferModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTransferModule.m; sourceTree = "<group>"; };
 		7DD180E321CCCB44003B086E /* RNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainViewController.h; sourceTree = "<group>"; };
 		7DD180E421CCCB44003B086E /* RNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainViewController.m; sourceTree = "<group>"; };
 		7DD180E521CCCB44003B086E /* RNView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNView.m; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				7D731E2321CCC7A500DB0640 /* VCSecond.m */,
 				7D04F51521D094D5008E24B1 /* OpenNativeModule.h */,
 				7D04F51621D094D5008E24B1 /* OpenNativeModule.m */,
+				7D78D22321D211EB00E7F4BF /* DataTransferModule.h */,
+				7D78D22421D211EB00E7F4BF /* DataTransferModule.m */,
 			);
 			path = Myapp;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				7D731E2421CCC7A500DB0640 /* VCSecond.m in Sources */,
 				7D731E2121CCBE2800DB0640 /* VCFirst.m in Sources */,
 				7DD180E721CCCB44003B086E /* RNMainViewController.m in Sources */,
+				7D78D22521D211EB00E7F4BF /* DataTransferModule.m in Sources */,
 				7D731DFD21CCBD6200DB0640 /* main.m in Sources */,
 				7DD180E821CCCB44003B086E /* RNView.m in Sources */,
 				7D731DEF21CCBD6100DB0640 /* AppDelegate.m in Sources */,

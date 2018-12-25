@@ -25,6 +25,16 @@
     _mylabel.text = @"xxxx";
     _mylabel.frame = CGRectMake(140, 140, 260, 380);
     
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(15, 100, [UIScreen mainScreen].bounds.size.width - 30, 50);
+    button.backgroundColor = [UIColor brownColor];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button setTitle:@"点击button跳转回RN页面并传递参数" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button];
     [self.view addSubview:_mylabel];
     
 }
@@ -43,5 +53,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (void)buttonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"sendCustomEventNotification" object:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
