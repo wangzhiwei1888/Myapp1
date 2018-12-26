@@ -10,6 +10,9 @@
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
 
+//引用全局变量
+extern NSDictionary *rootDict;
+
 @implementation RNView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -21,9 +24,14 @@
         #else
                 [[RCTBundleURLProvider sharedSettings] setDefaults];
         #endif
-
+        
+        NSString *root = [rootDict objectForKey:@"root"];
+        NSLog(@"dict = %@%@",root,@"index.ios");
+        
+        NSString *rootFile = [root stringByAppendingString:@"index.ios" ];
+        
         NSURL *jsCodeLocation;
-        jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"datatransfer/index.ios" fallbackResource:nil];
+        jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:rootFile fallbackResource:nil];
         
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                             moduleName:@"Helloworld"

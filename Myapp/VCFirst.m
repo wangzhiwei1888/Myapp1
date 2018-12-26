@@ -14,6 +14,8 @@
 
 @end
 
+NSDictionary *rootDict;
+
 @implementation VCFirst
 
 - (void)viewDidLoad {
@@ -44,7 +46,9 @@
     [_mybutton2 addTarget:self action:@selector(onClickRN2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_mybutton2];
     
-    
+    rootDict = @{
+        @"root": @"",
+    };
     
     
     // Do any additional setup after loading the view.
@@ -61,6 +65,10 @@
 -(void)onClickRN{
     
     RNMainViewController *vc = [[RNMainViewController alloc] init];
+    vc.title = @"fromRN";
+    rootDict = @{
+         @"root": @"",
+    };
     [self.navigationController pushViewController:vc animated:YES];
     
 }
@@ -68,7 +76,13 @@
 -(void)onClickRN2{
     
     RNMainViewController *vc = [[RNMainViewController alloc] init];
+    vc.title = @"fromRN2";
+    
+    rootDict = @{
+        @"root": @"datatransfer/",
+    };
     [self.navigationController pushViewController:vc animated:YES];
+    
     
 }
 

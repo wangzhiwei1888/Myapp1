@@ -11,8 +11,6 @@
 @interface VCFirst : UIViewController{
 //    UIImageView *_imageView;
     
-
-    
     UIButton *_mybutton;
     UIButton *_mybutton1;
     UIButton *_mybutton2;
