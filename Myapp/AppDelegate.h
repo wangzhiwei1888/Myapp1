@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,strong) UINavigationController *navController;
+
+@property (strong, nonatomic) Reachability *conn;
 
 @end
 

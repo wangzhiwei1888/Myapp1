@@ -1,4 +1,21 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - KVNProgress (2.2.4)
+  - Reachability (3.2)
   - React/ART (0.33.1):
     - React/Core
   - React/Core (0.33.1):
@@ -27,8 +44,15 @@ PODS:
     - React/Core
   - React/RCTWebSocket (0.33.1):
     - React/Core
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SSZipArchive (2.1.4)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - KVNProgress (~> 2.2.4)
+  - Reachability (~> 3.2)
   - React/ART (from `./reactnative/node_modules/react-native`)
   - React/Core (from `./reactnative/node_modules/react-native`)
   - React/RCTActionSheet (from `./reactnative/node_modules/react-native`)
@@ -42,14 +66,29 @@ DEPENDENCIES:
   - React/RCTText (from `./reactnative/node_modules/react-native`)
   - React/RCTVibration (from `./reactnative/node_modules/react-native`)
   - React/RCTWebSocket (from `./reactnative/node_modules/react-native`)
+  - SDWebImage (~> 3.7.5)
+  - SSZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - KVNProgress
+    - Reachability
+    - SDWebImage
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   React:
     :path: "./reactnative/node_modules/react-native"
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  KVNProgress: 541edcea5a1fef592aceac8d791a410d38cb499d
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   React: 8619f2b7f2de4279293e090a19fdf5c9f63f20be
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 
-PODFILE CHECKSUM: 8b361a155d7bd83ba639601cf0305f853cdc3e88
+PODFILE CHECKSUM: b1f7234acbd9f5e0406be78c1561ffb8c9e91d85
 
 COCOAPODS: 1.5.3

@@ -8,6 +8,8 @@
 
 #import "VCFirst.h"
 #import "VCSecond.h"
+#import "DownView.h"
+
 #import "RNMainViewController.h"
 
 @interface VCFirst ()
@@ -46,6 +48,14 @@ NSDictionary *rootDict;
     [_mybutton2 addTarget:self action:@selector(onClickRN2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_mybutton2];
     
+    
+    _downbutton = [[UIButton alloc] init];
+    [_downbutton setTitle:@"DownView" forState:UIControlStateNormal];
+    _downbutton.backgroundColor = [UIColor redColor];
+    _downbutton.frame = CGRectMake(40, 340, 100, 40);
+    [_downbutton addTarget:self action:@selector(onClickDownButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_downbutton];
+    
     rootDict = @{
         @"root": @"",
     };
@@ -61,6 +71,14 @@ NSDictionary *rootDict;
     NSLog(@"test");
      [self.navigationController pushViewController:vcsecond animated:true];
 }
+
+-(void)onClickDownButton{
+    
+    DownView *dw = [[DownView alloc] init];
+    NSLog(@"DownView");
+    [self.navigationController pushViewController:dw animated:true];
+}
+
 
 -(void)onClickRN{
     

@@ -24,8 +24,14 @@
     _navController = [[UINavigationController alloc] initWithRootViewController:[[VCFirst alloc] init]];
     
     self.window.rootViewController = _navController;
-    
+    NSLog(@"start....");
     [self.window makeKeyAndVisible];
+    
+    // 监听网络状态改变的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStateChange) name:kReachabilityChangedNotification object:nil];
+    self.conn = [Reachability reachabilityForInternetConnection];
+    [self.conn startNotifier];
+    
     
     return YES;
 }
@@ -55,6 +61,25 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)networkStateChange
+{
+    // 1.检测wifi状态
+    Reachability *wifi = [Reachability reachabilityForLocalWiFi];
+    
+    // 2.检测手机是否能上网络(WIFI\3G\2.5G)
+    Reachability *conn = [Reachability reachabilityForInternetConnection];
+    
+    // 3.判断网络状态
+    if ([wifi currentReachabilityStatus] != NotReachable) { // 有wifi
+        NSLog(@"有wifi");
+    } else if ([conn currentReachabilityStatus] != NotReachable) {
+        // 没有使用wifi, 使用手机自带网络进行上网
+        NSLog(@"使用手机自带网络进行上网");
+    } else { // 没有网络
+        NSLog(@"没有网络");
+    }
 }
 
 

@@ -18,8 +18,10 @@
 		7D731E2121CCBE2800DB0640 /* VCFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731E2021CCBE2800DB0640 /* VCFirst.m */; };
 		7D731E2421CCC7A500DB0640 /* VCSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D731E2321CCC7A500DB0640 /* VCSecond.m */; };
 		7D78D22521D211EB00E7F4BF /* DataTransferModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D78D22421D211EB00E7F4BF /* DataTransferModule.m */; };
+		7D79F8CF21D5CE13001D2CAB /* DownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D79F8CE21D5CE13001D2CAB /* DownView.m */; };
 		7DD180E721CCCB44003B086E /* RNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD180E421CCCB44003B086E /* RNMainViewController.m */; };
 		7DD180E821CCCB44003B086E /* RNView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD180E521CCCB44003B086E /* RNView.m */; };
+		7DDE06BD21D5BE680071735E /* NetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE06BC21D5BE680071735E /* NetRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +64,16 @@
 		7D731E2321CCC7A500DB0640 /* VCSecond.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCSecond.m; sourceTree = "<group>"; };
 		7D78D22321D211EB00E7F4BF /* DataTransferModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTransferModule.h; sourceTree = "<group>"; };
 		7D78D22421D211EB00E7F4BF /* DataTransferModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTransferModule.m; sourceTree = "<group>"; };
+		7D79F8CB21D5C496001D2CAB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7D79F8CC21D5C4DC001D2CAB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7D79F8CD21D5CE13001D2CAB /* DownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownView.h; sourceTree = "<group>"; };
+		7D79F8CE21D5CE13001D2CAB /* DownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownView.m; sourceTree = "<group>"; };
 		7DD180E321CCCB44003B086E /* RNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainViewController.h; sourceTree = "<group>"; };
 		7DD180E421CCCB44003B086E /* RNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainViewController.m; sourceTree = "<group>"; };
 		7DD180E521CCCB44003B086E /* RNView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNView.m; sourceTree = "<group>"; };
 		7DD180E621CCCB44003B086E /* RNView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNView.h; sourceTree = "<group>"; };
+		7DDE06BB21D5BE680071735E /* NetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetRequest.h; sourceTree = "<group>"; };
+		7DDE06BC21D5BE680071735E /* NetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetRequest.m; sourceTree = "<group>"; };
 		BE511CFC95D5AD42098CFA54 /* Pods-Myapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.debug.xcconfig"; sourceTree = "<group>"; };
 		E58E9CAAA29E42010DBFB7B5 /* libPods-Myapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Myapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +146,8 @@
 		7D731DEC21CCBD6100DB0640 /* Myapp */ = {
 			isa = PBXGroup;
 			children = (
+				7D79F8CA21D5C46C001D2CAB /* config */,
+				7DDE06BA21D5BE1D0071735E /* down */,
 				7DD180E321CCCB44003B086E /* RNMainViewController.h */,
 				7DD180E421CCCB44003B086E /* RNMainViewController.m */,
 				7DD180E621CCCB44003B086E /* RNView.h */,
@@ -178,6 +188,26 @@
 			path = MyappUITests;
 			sourceTree = "<group>";
 		};
+		7D79F8CA21D5C46C001D2CAB /* config */ = {
+			isa = PBXGroup;
+			children = (
+				7D79F8CB21D5C496001D2CAB /* PrefixHeader.pch */,
+				7D79F8CC21D5C4DC001D2CAB /* Constants.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		7DDE06BA21D5BE1D0071735E /* down */ = {
+			isa = PBXGroup;
+			children = (
+				7DDE06BB21D5BE680071735E /* NetRequest.h */,
+				7DDE06BC21D5BE680071735E /* NetRequest.m */,
+				7D79F8CD21D5CE13001D2CAB /* DownView.h */,
+				7D79F8CE21D5CE13001D2CAB /* DownView.m */,
+			);
+			name = down;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +220,7 @@
 				7D731DE721CCBD6100DB0640 /* Frameworks */,
 				7D731DE821CCBD6100DB0640 /* Resources */,
 				7DD180E221CCCA1D003B086E /* ShellScript */,
+				49ECAECE9D321DE9BDC31ECF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +339,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49ECAECE9D321DE9BDC31ECF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Myapp/Pods-Myapp-resources.sh",
+				"${PODS_ROOT}/KVNProgress/KVNProgress/Resources/KVNProgressView.xib",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KVNProgressView.nib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Myapp/Pods-Myapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7DD180E221CCCA1D003B086E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D04F51721D094D5008E24B1 /* OpenNativeModule.m in Sources */,
+				7DDE06BD21D5BE680071735E /* NetRequest.m in Sources */,
+				7D79F8CF21D5CE13001D2CAB /* DownView.m in Sources */,
 				7D731E2421CCC7A500DB0640 /* VCSecond.m in Sources */,
 				7D731E2121CCBE2800DB0640 /* VCFirst.m in Sources */,
 				7DD180E721CCCB44003B086E /* RNMainViewController.m in Sources */,
@@ -510,6 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Myapp/config/PrefixHeader.pch";
 				INFOPLIST_FILE = Myapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jr.jd.com.Myapp;
@@ -524,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Myapp/config/PrefixHeader.pch";
 				INFOPLIST_FILE = Myapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jr.jd.com.Myapp;
