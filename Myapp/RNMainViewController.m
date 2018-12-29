@@ -21,6 +21,8 @@
     // Do any additional setup after loading the view.
 //    self.title = @"RN模块首页";
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     RNView * rnView = [[RNView alloc] initWithFrame:self.view.bounds];
     self.view = rnView;
     

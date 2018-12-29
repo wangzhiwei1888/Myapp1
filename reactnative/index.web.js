@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Platform
 } from 'react-native';
 
 
@@ -22,3 +23,10 @@ class Main extends Component {
 
 AppRegistry.registerComponent('Helloworld', () => Main);
 
+if (Platform.OS == 'web') {
+  var app = document.createElement('div');
+  document.body.appendChild(app);
+  AppRegistry.runApplication('Helloworld', {
+    rootTag: app
+  });
+}

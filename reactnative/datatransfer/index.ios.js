@@ -157,6 +157,9 @@ class Main extends Component<Props> {
       case 1:
         DataTransferModule.jumpToNativeView();
         break;
+      case 2:
+        DataTransferModule.jumpToReactNativeView();
+        break;
     }
   }
 
@@ -182,7 +185,8 @@ const section2 = [
 
 const section3 = [
   'RN获取原生端定义的常量',
-  'RN监听原生端事件'
+  'RN监听原生端事件',
+  'RN跳转RN页面'
 ];
 
 

@@ -1498,7 +1498,8 @@ Main=function(_Component){babelHelpers.inherits(Main,_Component);function Main()
 {
 return(
 _react2.default.createElement(_reactNative.View,{style:{backgroundColor:'yellow',flex:1,alignItems:'center',justifyContent:'center'},__source:{fileName:_jsxFileName,lineNumber:14}},
-_react2.default.createElement(_reactNative.Text,{__source:{fileName:_jsxFileName,lineNumber:15}},'Hello Worldxxx')));
+_react2.default.createElement(_reactNative.View,{__source:{fileName:_jsxFileName,lineNumber:15}},_react2.default.createElement(_reactNative.Text,{__source:{fileName:_jsxFileName,lineNumber:15}},'Hello World')),
+_react2.default.createElement(_reactNative.View,{__source:{fileName:_jsxFileName,lineNumber:16}},_react2.default.createElement(_reactNative.Text,{__source:{fileName:_jsxFileName,lineNumber:16}},'jason xxxxx'))));
 
 
 }}]);return Main;}(_react.Component);

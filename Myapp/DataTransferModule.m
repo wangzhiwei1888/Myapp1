@@ -9,8 +9,13 @@
 #import "DataTransferModule.h"
 #import "AppDelegate.h"
 #import "VCSecond.h"
+#import "RNMainViewController.h"
 
 NSString *const kCustomEventName = @"CustomEventName";
+
+//引用全局变量
+extern NSDictionary *rootDict;
+
 
 @implementation DataTransferModule
 
@@ -130,6 +135,27 @@ RCT_EXPORT_METHOD(jumpToNativeView) {
         [delegate.window.rootViewController presentViewController:testVC animated:YES completion:nil];
     });
 }
+
+/// 跳转界面，跳转到rn页面
+RCT_EXPORT_METHOD(jumpToReactNativeView) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//        VCSecond *testVC = [[VCSecond alloc] init];
+//        [delegate.window.rootViewController presentViewController:testVC animated:YES completion:nil];
+        
+        RNMainViewController *vc = [[RNMainViewController alloc] init];
+        vc.title = @"fromRN";
+        rootDict = @{
+            @"downBool": @(TRUE),
+        };
+//        [self.navigationController pushViewController:vc animated:YES];
+        [delegate.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    });
+}
+
+
+
+
 
 /// 接收通知的方法，接收到通知后发送事件到RN端。RN端接收到事件后可以进行相应的逻辑处理或界面跳转
 - (void)sendCustomEvent:(NSNotification *)notification {

@@ -8,7 +8,7 @@
 
 #import "VCFirst.h"
 #import "VCSecond.h"
-#import "DownView.h"
+
 
 #import "RNMainViewController.h"
 
@@ -74,9 +74,15 @@ NSDictionary *rootDict;
 
 -(void)onClickDownButton{
     
-    DownView *dw = [[DownView alloc] init];
-    NSLog(@"DownView");
-    [self.navigationController pushViewController:dw animated:true];
+    RNMainViewController *vc = [[RNMainViewController alloc] init];
+    
+    rootDict = @{
+        @"downBool": @(TRUE)
+    };
+    
+    [self.navigationController pushViewController:vc animated:true];
+    
+    
 }
 
 
